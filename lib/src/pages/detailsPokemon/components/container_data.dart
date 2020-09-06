@@ -23,6 +23,7 @@ class ContainerData extends StatelessWidget {
             EdgeInsets.only(bottom: 25, top: getProportionateScreenHeight(190)),
         child: Container(
           padding: EdgeInsets.all(35),
+          height: screenHeight() - getProportionateScreenHeight(250),
           width: screenWidth() - getProportionateScreenWidth(50),
           decoration: BoxDecoration(
               color: Colors.white,
