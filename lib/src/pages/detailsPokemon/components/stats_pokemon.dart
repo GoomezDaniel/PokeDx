@@ -33,28 +33,26 @@ class StatsPokemon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[0].baseStat / 255,
+                percent: valorPorcentaje(0),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[0].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(0),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Vida',
                   style: styleDetails,
                 ),
               ),
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[1].baseStat / 255,
+                percent: valorPorcentaje(1),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[1].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(1),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Ataque',
                   style: styleDetails,
@@ -66,28 +64,26 @@ class StatsPokemon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[2].baseStat / 255,
+                percent: valorPorcentaje(2),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[2].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(2),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Defensa',
                   style: styleDetails,
                 ),
               ),
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[3].baseStat / 255,
+                percent: valorPorcentaje(3),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[3].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(3),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Ataque\nEspecial',
                   style: styleDetails,
@@ -100,14 +96,13 @@ class StatsPokemon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[4].baseStat / 255,
+                percent: valorPorcentaje(4),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[4].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(4),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Defensa\nEspecial',
                   style: styleDetails,
@@ -115,14 +110,13 @@ class StatsPokemon extends StatelessWidget {
                 ),
               ),
               CircularPercentIndicator(
+                animation: true,
                 radius: getProportionateScreenHeight(110),
-                percent: pokemon.stats[5].baseStat / 255,
+                percent: valorPorcentaje(5),
                 lineWidth: getProportionateScreenHeight(10),
                 progressColor: colorgen,
-                center: Text(
-                  '${pokemon.stats[5].baseStat}',
-                  style: styleDetails,
-                ),
+                center: Text(valorStats(5),
+                    style: styleDetails, textAlign: TextAlign.center),
                 header: Text(
                   'Velocidad',
                   style: styleDetails,
@@ -133,5 +127,23 @@ class StatsPokemon extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  /// Metodo que comprueba si hay datos y devuelve el valor de los ataques
+  double valorPorcentaje(int index) {
+    if (pokemon.stats.length != 0) {
+      return pokemon.stats[index].baseStat / 255;
+    } else {
+      return 0.0;
+    }
+  }
+
+  /// Metodo que comprueba si hay datos y devuelve el valor de los ataques
+  String valorStats(int index) {
+    if (pokemon.stats.length > 0) {
+      return pokemon.stats[index].baseStat.toString();
+    } else {
+      return 'No hay datos';
+    }
   }
 }

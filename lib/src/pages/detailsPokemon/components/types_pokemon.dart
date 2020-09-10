@@ -31,15 +31,16 @@ class TypesPokemon extends StatelessWidget {
                   style: styleDetails,
                 ),
               ),
-              SizedBox(width: 30),
               pokemon.types.length > 1
-                  ? RaisedButton(
-                      onPressed: () {},
-                      child: Text(
-                        pokemon.types[1].type.name.toUpperCase(),
-                        style: styleDetails,
-                      ),
-                    )
+                  ? Row(children: [
+                      SizedBox(width: 30),
+                      RaisedButton(
+                          onPressed: () {},
+                          child: Text(
+                            pokemon.types[1].type.name.toUpperCase(),
+                            style: styleDetails,
+                          ))
+                    ])
                   : Text('')
             ],
           ),
