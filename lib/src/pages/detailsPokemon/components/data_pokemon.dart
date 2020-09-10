@@ -37,7 +37,7 @@ class DetailsPokemon extends StatelessWidget {
                 ],
               ),
               StatsPokemon(pokemon: pokemon, colorgen: colorgen),
-              TypesPokemon(pokemon: pokemon)
+              TypesPokemon(pokemon: pokemon, colorGen: colorgen)
             ],
           );
         } else {

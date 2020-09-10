@@ -9,6 +9,11 @@ final styleDetails = GoogleFonts.pressStart2p(
   fontSize: getProportionateScreenHeight(12),
 );
 
+/// Constante de estilo para las estadisticas del pokemon
+final styleDetailsButton = GoogleFonts.pressStart2p(
+  fontSize: getProportionateScreenHeight(12),
+);
+
 /// Metodo que devuelve el color de la generación segun la id del pokemon
 Color colores(int index) {
   List<Color> colores = [
@@ -19,7 +24,8 @@ Color colores(int index) {
     Colors.purpleAccent,
     Colors.orangeAccent[400],
     Colors.pinkAccent,
-    Colors.limeAccent[400]
+    Colors.limeAccent[400],
+    Colors.amberAccent[400]
   ];
 
   if (index < 151) {
@@ -36,8 +42,10 @@ Color colores(int index) {
     return colores[5];
   } else if (index < 809) {
     return colores[6];
-  } else {
+  } else if (index < 893) {
     return colores[7];
+  } else {
+    return colores[8];
   }
 }
 
@@ -47,14 +55,24 @@ String urlImage(int index) {
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$index.png',
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$index.png',
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/$index.png',
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index + 9107}.png',
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 9107}.png'
   ];
 
   if (index <= 721) {
     return urls[0];
   } else if (index <= 807) {
     return urls[1];
-  } else {
+  } else if (index <= 893) {
     return urls[2];
+  } else if (index + 9107 >= 10027 && index + 9107 <= 10032) {
+    return urls[4];
+  } else if (index + 9107 == 10061) {
+    return urls[4];
+  } else if (index + 9107 >= 10080 && index + 9107 <= 10085) {
+    return urls[4];
+  } else {
+    return urls[3];
   }
 }
 
@@ -69,6 +87,7 @@ String texto(int index) {
     '6º Generación',
     '7º Generación',
     '8º Generación',
+    'Mega y Formas',
   ];
   if (index < 151) {
     return texto[0];
@@ -84,7 +103,9 @@ String texto(int index) {
     return texto[5];
   } else if (index < 809) {
     return texto[6];
-  } else {
+  } else if (index < 893) {
     return texto[7];
+  } else {
+    return texto[8];
   }
 }

@@ -28,11 +28,13 @@ class StatsPokemon extends StatelessWidget {
             'Estadísticas',
             style: styleDetails,
           ),
-          Divider(),
+          Divider(color: Colors.blueGrey[600]),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(0),
@@ -46,6 +48,8 @@ class StatsPokemon extends StatelessWidget {
                 ),
               ),
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(1),
@@ -64,6 +68,8 @@ class StatsPokemon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(2),
@@ -77,6 +83,8 @@ class StatsPokemon extends StatelessWidget {
                 ),
               ),
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(3),
@@ -96,6 +104,8 @@ class StatsPokemon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(4),
@@ -110,6 +120,8 @@ class StatsPokemon extends StatelessWidget {
                 ),
               ),
               CircularPercentIndicator(
+                animationDuration: 1300,
+                backgroundColor: Colors.blueGrey[600],
                 animation: true,
                 radius: getProportionateScreenHeight(110),
                 percent: valorPorcentaje(5),

@@ -28,7 +28,7 @@ class _ListPokemonsState extends State<ListPokemons> {
   //Variables
   PokeList pokeList;
   List<Result> resultados = [];
-  String url = 'https://pokeapi.co/api/v2/pokemon?limit=47&offset=0';
+  String url = 'https://pokeapi.co/api/v2/pokemon?limit=50&offset=0';
   ScrollController _scrollController = new ScrollController();
   List<int> _listaNumeros = new List();
   int _ultimoNumero = 0;
@@ -143,9 +143,9 @@ class _ListPokemonsState extends State<ListPokemons> {
   }
 
   /// Metodo que ejecuta la suma de más valores a la lista
-  void _agregar47() {
-    for (var i = 1; i < 47; i++) {
-      if (_ultimoNumero <= 892) {
+  void _agregar50() {
+    for (var i = 1; i < 50; i++) {
+      if (_ultimoNumero < 983) {
         _ultimoNumero++;
         _listaNumeros.add(_ultimoNumero);
       }
@@ -168,22 +168,22 @@ class _ListPokemonsState extends State<ListPokemons> {
   void respuestaHTTP() {
     _isLoading = false;
 
-    _scrollController.animateTo(_scrollController.position.pixels + 100,
+    _scrollController.animateTo(_scrollController.position.pixels + 150,
         duration: Duration(milliseconds: 250), curve: Curves.fastOutSlowIn);
 
     _getPokemons();
-    _agregar47();
+    _agregar50();
   }
 
   @override
   void initState() {
     super.initState();
     _getPokemons();
-    _agregar47();
+    _agregar50();
     _scrollController.addListener(() {
       if (_scrollController.position.pixels ==
           _scrollController.position.maxScrollExtent) {
-        if (_ultimoNumero <= 892) {
+        if (_ultimoNumero < 983) {
           fetchData();
         }
       }
