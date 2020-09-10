@@ -29,7 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   # Audio
-  assets_audio_player: ^1.4.7+4
+  assets_audio_player: ^2.0.10
   # Animaciones
   animate_do:
   # Servicio HTTP

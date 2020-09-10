@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'components/background_home.dart';
+import 'package:pokedanix/src/commons/background_image.dart';
 import 'components/list_pokemons.dart';
 
 /// Constructor de la pantalla Home
@@ -21,7 +20,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Stack(children: [
-        BackgroundHome(),
+        BackgroundImage(urlAsset: 'assets/list_wallpaper.png'),
         ListPokemons(),
       ]),
     );

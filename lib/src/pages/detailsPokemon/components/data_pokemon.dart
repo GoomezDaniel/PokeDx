@@ -30,11 +30,10 @@ class DetailsPokemon extends StatelessWidget {
             alignment: WrapAlignment.spaceEvenly,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text('${pokemon.height / 10}m', style: styleDetails),
-                  Text('${(pokemon.weight / 10).toInt()}kg',
-                      style: styleDetails)
+                  Text('${(pokemon.weight / 10)}kg', style: styleDetails)
                 ],
               ),
               StatsPokemon(pokemon: pokemon, colorgen: colorgen),

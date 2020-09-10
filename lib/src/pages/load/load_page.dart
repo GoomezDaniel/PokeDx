@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedanix/src/pages/load/components/back_image.dart';
-import 'package:pokedanix/src/size_config.dart';
 
+import '../../size_config.dart';
 import 'components/body_load.dart';
 
 /// Constructor de la pantalla de Inicio

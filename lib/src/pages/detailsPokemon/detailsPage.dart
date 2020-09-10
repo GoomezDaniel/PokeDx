@@ -16,16 +16,30 @@ class DetailsPokemonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorGen,
-      appBar: AppBar(
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.blueGrey[900]),
-        backgroundColor: Colors.transparent,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: 80),
+          child: Stack(children: [
+            FondoImagen(),
+            ContainerData(url: url, colorGen: colorGen),
+            ImageAndName(image: image, name: name),
+          ]),
+        ),
       ),
-      body: Stack(children: [
-        FondoImagen(),
-        ContainerData(url: url, colorGen: colorGen),
-        ImageAndName(image: image, name: name),
-      ]),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FloatingActionButton(
+            backgroundColor: Colors.blueGrey[900],
+            elevation: 16,
+            child: Icon(
+              Icons.arrow_back,
+              color: colorGen,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+      ),
     );
   }
 }

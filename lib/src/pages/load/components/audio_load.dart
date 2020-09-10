@@ -46,7 +46,7 @@ class _AudioLoadState extends State<AudioLoad> {
   void initState() {
     super.initState();
     soundtrack.open(Audio("assets/soundtrack.mp3"), autoStart: true);
-    soundtrack.loop = true;
+    soundtrack.loopMode;
   }
 
   @override

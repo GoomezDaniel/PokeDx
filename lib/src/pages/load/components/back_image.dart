@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-
-import '../../../size_config.dart';
+import 'package:pokedanix/src/commons/background_image.dart';
 
 /// Contructor del BackgroungImage de la pantalla de inicio
 class BackImage extends StatefulWidget {
@@ -18,12 +17,7 @@ class _BackImageState extends State<BackImage> {
   Widget build(BuildContext context) {
     return FadeIn(
       duration: Duration(seconds: 2),
-      child: Image(
-        image: AssetImage('assets/fondo.gif'),
-        height: screenHeight(),
-        width: screenWidth(),
-        fit: BoxFit.cover,
-      ),
+      child: BackgroundImage(urlAsset: 'assets/fondo.gif'),
     );
   }
 }

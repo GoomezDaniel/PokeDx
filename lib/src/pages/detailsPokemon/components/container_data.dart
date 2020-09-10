@@ -22,8 +22,7 @@ class ContainerData extends StatelessWidget {
         padding:
             EdgeInsets.only(bottom: 25, top: getProportionateScreenHeight(190)),
         child: Container(
-          padding: EdgeInsets.all(35),
-          height: screenHeight() - getProportionateScreenHeight(250),
+          padding: EdgeInsets.fromLTRB(35, 55, 35, 35),
           width: screenWidth() - getProportionateScreenWidth(50),
           decoration: BoxDecoration(
               color: Colors.white,
@@ -32,8 +31,7 @@ class ContainerData extends StatelessWidget {
                 BoxShadow(
                     color: Colors.black38, spreadRadius: 5, blurRadius: 10)
               ]),
-          child: SingleChildScrollView(
-              child: DetailsPokemon(url: url, colorgen: colorGen)),
+          child: DetailsPokemon(url: url, colorgen: colorGen),
         ),
       ),
     );
