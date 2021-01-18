@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokedanix/src/pages/detailsPokemon/components/data_pokemon.dart';
 
 import '../../../size_config.dart';
+import 'data_pokemon.dart';
 
 /// Constructor del contenerdor en el que se muestran
 /// todas las estadísticas del pokemon
